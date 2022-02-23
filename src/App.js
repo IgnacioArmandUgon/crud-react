@@ -7,9 +7,9 @@ import AddUserForm from "./componentes/AddUserForm";
 
 const App = () => {
   const usersData = [
-     { id: uuidv4, name: 'Tania', username: 'floppydiskette' },
-     { id: uuidv4, name: 'Craig', username: 'siliconeidolon' },
-     { id: uuidv4, name: 'Ben', username: 'benisphere' },
+     { id: uuidv4(), name: 'Tania', username: 'floppydiskette' },
+     { id: uuidv4(), name: 'Craig', username: 'siliconeidolon' },
+     { id: uuidv4(), name: 'Ben', username: 'benisphere' },
   ]
 
   const [users, setUsers] = useState(usersData)
@@ -22,9 +22,10 @@ const App = () => {
   }
 
   //Eliminar usuario
-  // const deleteUser = (id) => {
-  //     console.log(id)
-  // }
+   const deleteUser = (id) => {
+    const usersSinElEliminado = users.filter( user => user.id !== id )
+    setUsers( usersSinElEliminado )
+   }
 
     return (
       <div className="container">
@@ -36,7 +37,7 @@ const App = () => {
         </div>
         <div className="flex-large">
           <h2>View users</h2>
-          <UserTable users={users}/>
+          <UserTable users={users} deleteUser={deleteUser}/>
         </div>
       </div>
     </div>
