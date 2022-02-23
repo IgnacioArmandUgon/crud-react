@@ -1,0 +1,10 @@
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+
+const EditUserForm = (props) => {
+  return (
+    <div>Hola mundo</div>
+  );
+};
+
+export default EditUserForm;
