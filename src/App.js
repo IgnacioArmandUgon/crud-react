@@ -1,6 +1,9 @@
 import React, {useState} from "react";
-import UserTable from "./componentes/UserTable";
 import {v4 as uuidv4} from 'uuid';
+
+import UserTable from "./componentes/UserTable";
+import AddUserForm from "./componentes/AddUserForm";
+
 
 const App = () => {
   const usersData = [
@@ -11,6 +14,17 @@ const App = () => {
 
   const [users, setUsers] = useState(usersData)
 
+  //Agregar usuario
+  const addUser = (user) => {
+    console.log(user)
+    user.id = uuidv4
+    setUsers([...users, user])
+  }
+
+  //Eliminar usuario
+  // const deleteUser = (id) => {
+  //     console.log(id)
+  // }
 
     return (
       <div className="container">
@@ -18,6 +32,7 @@ const App = () => {
       <div className="flex-row">
         <div className="flex-large">
           <h2>Add user</h2>
+          <AddUserForm addUser={addUser}/>
         </div>
         <div className="flex-large">
           <h2>View users</h2>
