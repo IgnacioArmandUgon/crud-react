@@ -14,8 +14,7 @@ const EditUserForm = ({ currentUser, updateUser }) => {
     setValue('username', currentUser.username)
 
     const onSubmit = ( data, e )=>{
-
-        console.log(data)
+        //console.log(data)
         data.id = currentUser.id
         updateUser( currentUser.id, data )
 
@@ -43,7 +42,7 @@ const EditUserForm = ({ currentUser, updateUser }) => {
                 {...register('username',{
                     required:{
                         value:true,
-                        message: 'UserName es requerido.'
+                        message: 'UserName es requerido'
                     }
                 })}
             />

@@ -7,11 +7,11 @@ import {v4 as uuidv4} from 'uuid';
 
 
 function App() {
-
+//Se crean algunos objetos usuarios
   const usersData = [
-    { id: uuidv4(), name: 'Mauricio', username: 'MauriKsk' },
-    { id: uuidv4(), name: 'Ignacio', username: 'NachoToNize' },
-    { id: uuidv4(), name: 'Cristian', username: 'ElPuppet' },
+    { id: uuidv4(), name: 'Juan', username: 'ElJuan' },
+    { id: uuidv4(), name: 'Nacho', username: 'NachoToNaiz' },
+    { id: uuidv4(), name: 'Amanda', username: 'NaBig8' },
   ]
 
   const [users, setUsers] = useState(usersData)
