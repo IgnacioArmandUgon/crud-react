@@ -18,7 +18,7 @@ const EditUserForm = ({ currentUser, updateUser }) => {
         data.id = currentUser.id
         updateUser( currentUser.id, data )
 
-        //Limpiar campos
+        //Se limpian los campos
         e.target.reset()
     }
 
