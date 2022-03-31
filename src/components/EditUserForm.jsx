@@ -13,6 +13,7 @@ const EditUserForm = ({ currentUser, updateUser }) => {
     setValue('name', currentUser.name)
     setValue('username', currentUser.username)
 
+
     const onSubmit = ( data, e )=>{
         //console.log(data)
         data.id = currentUser.id

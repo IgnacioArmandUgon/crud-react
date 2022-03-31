@@ -31,7 +31,7 @@ function App() {
     setUsers( arraySinElIdFiltrado )
   }
 
-  //Editar usuario 
+  //Editar usuario
   const [ editing, setEditing ] = useState( false )
 
   const [ currentUser, setCurrentUser ] = useState({
